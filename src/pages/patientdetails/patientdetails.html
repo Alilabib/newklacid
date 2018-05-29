@@ -1,0 +1,397 @@
+<!--
+  Generated template for the PatientdetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="footer">
+   
+    <ion-title>Patient profile</ion-title>
+  </ion-navbar>
+  <ion-segment [(ngModel)]="segment" color="segment" >
+      <ion-segment-button value="urt">
+        URTIs
+      </ion-segment-button>
+      <ion-segment-button value="lrt">
+        LTRIs
+      </ion-segment-button>
+  
+    </ion-segment>
+</ion-header>
+
+
+<ion-content text-center>
+ 
+
+  <div [ngSwitch]="segment">
+
+    <div padding *ngSwitchCase="'urt'">
+      <ion-slides pager=true paginationType=bullet spaceBetween=10 zoom=true *ngIf="patient=='p1'">
+        <ion-slide>
+          <img src="assets/ref/p1.png" />
+        </ion-slide>
+        <ion-slide>
+          <img class="pic" src="assets/ref/p1-avatar.png" />
+          <div class="fabss" text-center>
+            <ion-note class="right" > Concentration per serum and nasal mucosa </ion-note>
+            <button id="fab1" (tap)="gotodetails('fab1','p1')" ion-fab color="fab">
+              <ion-icon>
+                <img src="assets/icon/fab1.png" />
+              </ion-icon>
+            </button>
+            <ion-note class="left" > Clinical cure rate </ion-note>
+            
+            <button (tap)="gotodetails('fab2','p1')" ion-fab color="fab">
+              <ion-icon>
+                <img src="assets/icon/fab8.png" />
+              </ion-icon>
+            </button>
+            <ion-note class="right" > Symptomatic improvement </ion-note>
+            
+            <button (tap)="gotodetails('fab3','p1')" ion-fab color="fab">
+              <ion-icon>
+                <img src="assets/icon/fab3.png" />
+              </ion-icon>
+            </button>
+            <ion-note class="left" > Bacteriological eradication / clinical success rate </ion-note>
+            
+            <button (tap)="gotodetails('fab4','p1')" ion-fab color="fab">
+              <ion-icon>
+                <img src="assets/icon/fab4.png" />
+              </ion-icon>
+            </button>
+            <ion-note class="right" > Guidelines </ion-note>
+            
+            <button (tap)="gotodetails('fab5','p1')" ion-fab color="fab">
+              <ion-icon>
+                <img src="assets/icon/fab6.png" />
+              </ion-icon>
+            </button>
+            <ion-note class="left" > Key messages </ion-note>
+            
+            <button (tap)="gotodetails('fab6','p1')" ion-fab color="fab">
+              <ion-icon>
+                <img src="assets/icon/fab7.png" />
+              </ion-icon>
+            </button>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <img class="pic" src="assets/ref/p1-avatar.png" />
+          <img src="assets/ref/p12.png" />
+        </ion-slide>
+        <ion-slide>
+          <img class="pic" src="assets/ref/p1-avatar.png" />
+          <img src="assets/ref/p13.png" />
+        </ion-slide>
+        <ion-slide>
+          <img class="pic" src="assets/ref/p1-avatar.png" />
+
+          <img src="assets/ref/p14.png" />
+        </ion-slide>
+        <ion-slide>
+          <img class="pic" src="assets/ref/p1-avatar.png" />
+
+          <img src="assets/ref/p15.png" />
+        </ion-slide>
+        <ion-slide>
+          <img class="pic" src="assets/ref/p1-avatar.png" />
+
+          <img src="assets/ref/p16.png" />
+        </ion-slide>
+        <ion-slide>
+          <img class="pic" src="assets/ref/p1-avatar.png" />
+
+          <img src="assets/ref/p17.png" />
+        </ion-slide>
+        <ion-slide>
+          <img class="pic" src="assets/ref/p1-avatar.png" />
+
+          <img src="assets/ref/p18.png" />
+        </ion-slide>
+        <ion-slide>
+          <img class="pic" src="assets/ref/p1-avatar.png" />
+
+          <img src="assets/ref/p19.png" />
+        </ion-slide>
+        <ion-slide>
+          <img class="pic" src="assets/ref/p1-avatar.png" />
+
+          <img src="assets/ref/p110.png" />
+        </ion-slide>
+        <ion-slide>
+          <img class="pic" src="assets/ref/p1-avatar.png" />
+
+          <img src="assets/ref/p111.png" />
+        </ion-slide>
+        <ion-slide>
+          <img class="pic" src="assets/ref/p1-avatar.png" />
+
+          <img src="assets/ref/p112.png" />
+        </ion-slide>
+        <ion-slide>
+          <img class="pic" src="assets/ref/p1-avatar.png" />
+
+          <img src="assets/ref/p113.png" />
+        </ion-slide>
+        <ion-slide>
+          <img class="pic" src="assets/ref/p1-avatar.png" />
+
+          <img src="assets/ref/p114.png" />
+        </ion-slide>
+      </ion-slides>
+
+
+      <ion-slides pager=true paginationType=bullet spaceBetween=10 zoom=true  *ngIf="patient=='p2'">
+        <ion-slide>
+          <img src="assets/ref/p21.png" />
+        </ion-slide>
+        <ion-slide>
+          <img class="pic" src="assets/ref/p2-avatar.png" />
+          <div class="fabss" text-center>
+            <ion-note class="right" > Concentration per serum and nasal mucosa </ion-note>
+            <button (tap)="gotodetails('fab1','p2')" ion-fab color="fab">
+              <ion-icon>
+                <img src="assets/icon/fab1.png" />
+              </ion-icon>
+            </button>
+            <ion-note class="left" > Clinical practice guideline </ion-note>
+            
+            <button (tap)="gotodetails('fab2','p2')" ion-fab color="fab">
+              <ion-icon>
+                <img src="assets/icon/fab6.png" />
+              </ion-icon>
+            </button>
+            <ion-note class="right" > Clinical cure rate / eradication rate </ion-note>
+            
+            <button (tap)="gotodetails('fab3','p2')" ion-fab color="fab">
+              <ion-icon>
+                <img src="assets/icon/fab3.png" />
+              </ion-icon>
+            </button>
+            <ion-note class="left" > Key messages</ion-note>
+            
+            <button (tap)="gotodetails('fab4','p2')" ion-fab color="fab">
+              <ion-icon>
+                <img src="assets/icon/fab7.png" />
+              </ion-icon>
+            </button>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <img class="pic" src="assets/ref/p2-avatar.png" />
+
+          <img src="assets/ref/p22.png" />
+        </ion-slide>
+        <ion-slide>
+          <img class="pic" src="assets/ref/p2-avatar.png" />
+
+          <img src="assets/ref/p23.png" />
+        </ion-slide>
+        <ion-slide>
+          <img class="pic" src="assets/ref/p2-avatar.png" />
+
+          <img src="assets/ref/p24.png" />
+        </ion-slide>
+        <ion-slide>
+          <img class="pic" src="assets/ref/p2-avatar.png" />
+
+          <img src="assets/ref/p25.png" />
+        </ion-slide>
+        <ion-slide>
+          <img class="pic" src="assets/ref/p2-avatar.png" />
+
+          <ion-segment [(ngModel)]="segment2" color="segment">
+            <ion-segment-button value="clinical">
+              Clinical treatment
+            </ion-segment-button>
+            <ion-segment-button value="eradication">
+              Eradication rate
+            </ion-segment-button>
+
+          </ion-segment>
+
+          <div [ngSwitch]="segment2">
+            <div padding *ngSwitchCase="'clinical'">
+              <ion-slides pager=true paginationType=bullet>
+                <ion-slide>
+                  <img src="assets/ref/P26A.png" />
+                </ion-slide>
+                <ion-slide>
+                  <img src="assets/ref/p26B.png" />
+                </ion-slide>
+              </ion-slides>
+            </div>
+            <div padding *ngSwitchCase="'eradication'">
+              <ion-slides pager=true paginationType=bullet>
+                <ion-slide>
+                  <img src="assets/ref/p27A.png" />
+                </ion-slide>
+                <ion-slide>
+                  <img src="assets/ref/p27B.png" />
+                </ion-slide>
+              </ion-slides>
+            </div>
+          </div>
+        </ion-slide>
+    <ion-slide>
+      <img class="pic" src="assets/ref/p2-avatar.png" />
+      <img src="assets/ref/p28.png" />
+    </ion-slide>
+    </ion-slides>
+
+
+   
+
+
+  </div>
+
+  <div padding *ngSwitchCase="'lrt'">
+    <img *ngIf="patient=='p1'||patient=='p2'" src="assets/ref/g2.png" />
+    <ion-slides pager=true paginationType=bullet spaceBetween=10 zoom=true *ngIf="patient=='p3'">
+      <ion-slide>
+        <img src="assets/ref/p31.png"/>
+      </ion-slide>
+      <ion-slide>
+          <img class="pic" src="assets/ref/p3-avatar.png"/>
+          <div class="fabss" text-center>
+            <ion-note class="right" > Concentration per serum and nasal mucosa </ion-note>
+              <button (tap)="gotodetails('fab1','p3')" ion-fab color="fab">
+                <ion-icon>
+                  <img src="assets/icon/fab1.png" />
+                </ion-icon>
+              </button>
+            <ion-note  class="left" > Relapse rate </ion-note>
+             
+              <button (tap)="gotodetails('fab2','p3')" ion-fab color="fab">
+                <ion-icon>
+                  <img src="assets/icon/fab'.png" />
+                </ion-icon>
+              </button>
+            <ion-note class="right" > Clinical and bacteriological cure rate</ion-note>
+             
+              <button (tap)="gotodetails('fab3','p3')" ion-fab color="fab">
+                <ion-icon>
+                  <img src="assets/icon/fab4.png" />
+                </ion-icon>
+              </button>
+            <ion-note  class="left" > Key messages </ion-note>
+              
+              <button (tap)="gotodetails('fab4','p3')" ion-fab color="fab">
+                <ion-icon>
+                  <img src="assets/icon/fab7.png" />
+                </ion-icon>
+              </button>
+            </div>
+        </ion-slide>
+      <ion-slide>
+          <img src="assets/ref/p32.png"/>
+        </ion-slide>
+        <ion-slide>
+            <img src="assets/ref/p33.png"/>
+          </ion-slide>
+          <ion-slide>
+              <img src="assets/ref/p34.png"/>
+            </ion-slide>
+            <ion-slide>
+                <img src="assets/ref/p35.png"/>
+              </ion-slide>
+              <ion-slide>
+                  <img src="assets/ref/p36.png"/>
+                </ion-slide>
+                <ion-slide>
+                    <img src="assets/ref/p37.png"/>
+                  </ion-slide>
+                  <ion-slide>
+                      <img src="assets/ref/p38.png"/>
+                    </ion-slide>
+  
+      </ion-slides>
+  
+      <ion-slides pager=true paginationType=bullet spaceBetween=10  *ngIf="patient=='p4'">
+          <ion-slide>
+            <img src="assets/ref/p41.png"/>
+          </ion-slide>
+            
+          <ion-slide>
+            <img class="pic" src="assets/ref/p4-avatar.png"/>
+            <div class="fabss" text-center>
+                <ion-note class="right" >Concentration per serum and nasal mucosa</ion-note>
+                <button (tap)="gotodetails('fab1','p4')" ion-fab color="fab">
+                  <ion-icon>
+                    <img src="assets/icon/fab1.png" />
+                  </ion-icon>
+                </button>
+                <ion-note class="left" >Efficacy</ion-note>
+                
+                <button (tap)="gotodetails('fab2','p4')" ion-fab color="fab">
+                  <ion-icon>
+                    <img src="assets/icon/fab4'.png" />
+                  </ion-icon>
+                </button>
+                <ion-note class="right" >Guidelines</ion-note>
+                
+                <button (tap)="gotodetails('fab3','p4')" ion-fab color="fab">
+                  <ion-icon>
+                    <img src="assets/icon/fab6.png" />
+                  </ion-icon>
+                </button>
+                <ion-note class="left" >Key messages</ion-note>
+                
+                <button (tap)="gotodetails('fab4','p4')" ion-fab color="fab">
+                  <ion-icon>
+                      <img src="assets/icon/fab7.png" />
+                  </ion-icon>
+                </button>
+              
+              </div>
+          </ion-slide>
+          <ion-slide>
+              <img src="assets/ref/p42.png"/>
+            </ion-slide>
+            <ion-slide>
+                <img src="assets/ref/p43.png"/>
+              </ion-slide>
+              <ion-slide>
+                  <img src="assets/ref/p44.png"/>
+                </ion-slide>
+                <ion-slide>
+                    <img src="assets/ref/p45.png"/>
+                  </ion-slide>
+                  <ion-slide>
+                      <img src="assets/ref/p46.png"/>
+                    </ion-slide>
+                    <ion-slide>
+                        <img src="assets/ref/p47.png"/>
+                      </ion-slide>
+                      <ion-slide>
+                          <img src="assets/ref/p48.png"/>
+                        
+                            <img src="assets/ref/p48a.png"/>
+                          
+                        </ion-slide>
+
+                          <ion-slide>
+                              <img src="assets/ref/p410.png"/>
+                            </ion-slide>
+                            <ion-slide>
+                                <img src="assets/ref/p411.png"/>
+                              </ion-slide>
+                              <ion-slide>
+                                  <img src="assets/ref/p413.png"/>
+                                </ion-slide>
+                              <ion-slide>
+                                  <img src="assets/ref/p412.png"/>
+                                </ion-slide>
+          </ion-slides>
+  
+  </div>
+
+  </div>
+
+</ion-content>
+<ion-footer no-lines >
+    <img (click)="gotofooter()" src="assets/ref/g1f.png"/>
+</ion-footer>

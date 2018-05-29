@@ -1,0 +1,88 @@
+page-patientdetails {
+    ion-segment{
+        margin-top: 7px;
+    }
+    .segment-md-segment .segment-button.segment-activated {
+        background-color: #f79b2e;
+        color: white;
+        opacity: 1;
+    }
+    .segment-ios-segment .segment-button.segment-activated {
+        background-color: #f79b2e;
+        color: white;
+        opacity: 1;
+    }
+    .segment-md .segment-button {
+       
+        text-transform: none;
+        color: #33444a;
+        background-color: #eaeaea;
+        opacity: 1;
+        -webkit-transition: 200ms all linear;
+        transition: 200ms all linear;
+        padding: 0 6px;
+        font-weight: bold;
+        line-height: 3rem;
+     
+    }
+    .segment-ios .segment-button {
+       
+        text-transform: none;
+        color: #33444a;
+        background-color: #eaeaea;
+        opacity: 1;
+        -webkit-transition: 200ms all linear;
+        transition: 200ms all linear;
+        padding: 0 6px;
+        font-weight: bold;
+        line-height: 3rem;
+        border: 0 ;
+        
+    }
+    ion-footer{
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 10px;
+    }
+    .pic{
+        height: 100px;
+        margin-bottom: 20px;
+    }
+.fabss{    
+    button{
+        margin-bottom: 10px;
+        
+        img{
+            height: 25px !important;
+        }
+        margin-right: 42% !important;
+        margin-left: 42% !important;
+        
+    }
+ 
+}
+
+
+
+button[ion-fab]:hover{
+    background-color: #f79b2e !important;
+}
+
+ion-note{
+    color:#33444a !important;
+  
+}
+.right{
+    position: absolute;
+    left: 60%;
+    margin-top: 10px;
+}
+.left{
+    position: absolute;
+    right: 60%;
+    margin-top: 10px;
+    
+}
+
+
+}

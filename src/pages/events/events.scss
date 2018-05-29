@@ -1,0 +1,118 @@
+page-events {
+  
+    ion-calendar{
+        background-color: transparent;
+        color:black !important;
+        
+    
+        .button-inner{
+            color:black;
+        }
+        button.fab.fab-md{
+            background-color: #492365;
+            .button-inner{
+            color: white !important;
+            span{
+                font-size: 25px;
+            }
+        }
+        }
+        button.fab.fab-ios.button-inner{
+            background-color: #492365;
+            .button-inner{
+            
+            color: white !important;
+            span{
+                font-size: 25px;
+            }
+        }
+        }
+         
+    }
+
+    
+    ion-segment{
+        margin-top: 3px;
+    }
+
+    .segment-md-segment .segment-button.segment-activated {
+        background-color: #f79b2e;
+        color: white;
+        opacity: 1;
+    }
+    .segment-ios-segment .segment-button.segment-activated {
+        background-color: #f79b2e;
+        color: white;
+        font-size: 17px;
+        opacity: 1;
+    }
+    .segment-md .segment-button {
+       
+        text-transform: none;
+        color: #33444a;
+        background-color: #eaeaea;
+        opacity: 1;
+        -webkit-transition: 200ms all linear;
+        transition: 200ms all linear;
+        padding: 0 6px;
+        font-weight: bold;
+        line-height: 3rem;
+        font-size: 17px;
+     
+    }
+    .segment-ios .segment-button {
+       
+        text-transform: none;
+        color: #33444a;
+        background-color: #eaeaea;
+        opacity: 1;
+        -webkit-transition: 200ms all linear;
+        transition: 200ms all linear;
+        padding: 0 6px;
+        font-weight: bold;
+        line-height: 3rem;
+        font-size: 17px;
+        border: 0;
+    }
+
+    ion-thumbnail{
+        background-color: #eaeaea;
+        text-align: center;
+    }
+
+
+  
+
+    ion-item:hover{
+      
+        ion-thumbnail{
+            background-color: #33444a !important;
+            margin-top: 4px !important; 
+         
+            
+            b{
+                color:white !important; 
+                margin-left: 5px;
+            }
+                color:white !important;
+                -webkit-transition: 200ms all linear;
+                transition: 200ms all linear;
+        }
+    }
+  
+   
+    .orange{
+        background-color: #ed7d31   !important;
+        p{
+        color:white !important;
+        }
+        
+    }
+
+    .green{
+        background-color: #32b7ae !important ;
+        p{
+            color:white !important;
+            }
+    }
+}

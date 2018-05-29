@@ -1,0 +1,56 @@
+page-login {
+  
+    ion-content{
+        background-image: url('../assets/imgs/bg.png') !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    form{
+        margin-top:100px;
+    }
+    ion-item {
+        background-color: rgba(255, 255, 255, 0.8) !important;
+        margin-bottom: 5px !important ;
+        
+      }
+
+      button{
+          height: 45px !important;
+      }
+
+
+      ion-label{
+        color: rgb(173, 175, 188) !important;
+      }
+
+      .checkbox{
+          background: transparent !important;
+          padding: 0;
+          ion-label{
+              color:white !important;
+          }
+
+      }
+
+      ion-col{
+        font-size: small;
+          margin-left: -8px !important;
+          font-weight: bold;
+      }
+ion-icon{ 
+      img{
+          height: 17px;
+      }
+    }
+
+      ion-icon{
+          font-size: 20px !important;
+          margin-right: 7px;
+      }
+      
+
+      
+      
+      
+      
+}

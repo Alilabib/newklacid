@@ -1,0 +1,158 @@
+page-guidelines {
+    .profilebutton {
+        z-index: 2;
+        position: sticky;
+        width: 30%;
+        right: 100%;
+    }
+    #button1{
+        bottom:75%;
+    }
+    #button2{
+        bottom:63%;
+    }
+    #button3{
+        bottom:50%;
+    }
+    #button4{
+        bottom:220px;
+        
+    }
+
+    .no-scroll{
+        overflow: hidden;
+    }
+
+    ion-segment{
+        margin-top:3px;
+    }
+    .segment-md-segment .segment-button.segment-activated {
+        background-color: #f79b2e;
+        color: white;
+        opacity: 1;
+    }
+    .segment-ios-segment .segment-button.segment-activated {
+        background-color: #f79b2e;
+        color: white;
+        opacity: 1;
+    }
+    .segment-md .segment-button {
+       
+        text-transform: none;
+        color: #33444a;
+        background-color: #eaeaea;
+        opacity: 1;
+        -webkit-transition: 200ms all linear;
+        transition: 200ms all linear;
+        padding: 0 6px;
+        font-size: 11px;
+        //font-size: 2.1rem;
+        font-weight: bold;
+     
+    }
+    .segment-ios .segment-button {
+       
+        text-transform: none;
+        color: #33444a;
+        background-color: #eaeaea;
+        opacity: 1;
+        -webkit-transition: 200ms all linear;
+        transition: 200ms all linear;
+        padding: 0 6px;
+        font-size: 11px;
+//        font-size: 2.1rem;
+        font-weight: bold;
+        border: 0px ;
+        
+    }
+    ion-footer{
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 10px;
+    }
+
+    .paragraph{
+            color: rgb(247, 155, 46);
+            text-transform: uppercase;
+            line-height: 1.2;
+            text-align: left;
+            z-index: 43;
+            font-weight: bold;
+    }
+    .paragraph2 {
+        font-size: small;
+        color: rgb(47, 62, 69);
+        line-height: 1.2;
+        text-align: left;
+        z-index: 64;
+      }
+
+      .paragraph3 {
+        font-size: xx-small;
+        color: rgb(47, 62, 69);
+        line-height: 1.2;
+        text-align: left;
+        z-index: 64;
+      }
+
+
+      .hover:hover{
+          background: #f79b2e;
+      }
+    
+
+      th {
+        border: 0.5px solid black;
+        border-top: 0px;
+        padding: 3px;
+        color: rgb(47, 62, 69);
+        line-height: 1.2;
+        text-align: left;
+        font-size: x-small;
+        background-color: rgb(234, 234, 234);
+    }
+
+    td {
+        border: 0.5px solid black;
+        padding: 5px;
+        color: rgb(47, 62, 69);
+        line-height: 1.2;
+        text-align: left;
+        font-size: xx-small;
+    }
+table{
+}
+    
+
+      th.rotate {
+        /* Something you can count on */
+        white-space: nowrap;
+        background: #f79b2e;
+    color: white;
+    border: 0;
+    border-right:1px solid white !important;        
+      }
+      
+      th.rotate > div {
+        transform: 
+          /* Magic Numbers */
+          /* 45 is really 360 - 45 */
+          rotate(-90deg);
+        width: 10px;
+        height: auto;
+        margin-top: 150px;
+      }
+      th.rotate > div > span {
+          font-size: 19px;
+          padding-right: 3px;
+          font-weight: 500;
+      }
+      #blue{
+          background: #33444a;
+
+      }
+
+      
+    
+}
+

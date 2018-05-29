@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar transparent>
+    <button ion-button menuToggle>
+      <ion-icon name="menu" color="light" ></ion-icon>
+    </button>
+    <ion-title  >Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content text-center padding>
+  <img class="fadeInUp"  height="150px" src="assets/icon/logo.png" />
+
+       <collapsible-list [type]="'accordion'">
+  
+  <collapsible-list-item>
+    <collapsible-header id="list1">
+      <ion-item no-lines >
+        <ion-icon item-start >
+          <img src="assets/icon/klacid.png" />
+        </ion-icon>
+        <h1>KLACIDS CORNER</h1>
+      </ion-item>
+        </collapsible-header>
+    <collapsible-body >
+      <button ion-item (tap)="openpage('guid')" >
+        <ion-icon item-start >
+            <img src="assets/icon/guide.png" />
+          </ion-icon>
+    <h3>  GUIDELINES </h3></button>
+    <button ion-item (tap)="openpage('patient')" >
+        <ion-icon item-start >
+            <img src="assets/icon/patients.png" />
+          </ion-icon>
+    <h3>  PATIENT PROFILES </h3></button>
+    <button ion-item (tap)="openpage('interactive')" >
+        <ion-icon item-start >
+            <img src="assets/icon/interactive.png" />
+          </ion-icon>
+   <h3>   INTERACTIVE PI  </h3></button>
+    <button ion-item (tap)="openpage('dose')" >
+        <ion-icon item-start >
+            <img src="assets/icon/calc.png" />
+          </ion-icon>
+   <h3>   DOSE CALCULATOR  </h3></button>
+    </collapsible-body>
+  </collapsible-list-item>
+
+  <collapsible-list-item>
+    <collapsible-header id="list2">
+      <ion-item no-lines >
+        <ion-icon item-start >
+          <img src="assets/icon/tailored.png" />
+        </ion-icon>
+        <h1>TAILORED FOR YOU</h1>
+      </ion-item>
+    </collapsible-header>
+    <collapsible-body >
+      <button ion-item (tap)="openpage('search')" >
+        <ion-icon item-start >
+            <img src="assets/icon/search.png" />
+          </ion-icon>
+     <h3> REFINE SEARCH ENGINE </h3> </button>
+    <button ion-item (tap)="openpage('events')" >
+        <ion-icon item-start >
+            <img src="assets/icon/events.png" />
+          </ion-icon>
+    <h3>  EVENTS/ANNOUNCEMENTS </h3> </button>
+    <button ion-item (tap)="openpage('asking')" >
+        <ion-icon item-start >
+            <img src="assets/icon/asking.png" />
+          </ion-icon>
+     <h3> ASKING YOU </h3> </button>
+      <button ion-item (tap)="openpage('lounge')" >
+        <ion-icon item-start >
+            <img src="assets/icon/lounge.png" />
+          </ion-icon>
+    <h3>  THE LOUNGE </h3>
+    </button>
+    </collapsible-body>
+  </collapsible-list-item>
+
+</collapsible-list>
+
+</ion-content>

@@ -1,0 +1,29 @@
+page-profile {
+    ion-content{
+        background: rgba(0, 0, 0, 0.6) !important;
+    }
+
+    ion-label{
+        font-size: small;
+    }
+
+    ion-item{
+        margin-bottom: 5px !important
+    }
+
+    ion-icon{
+        font-size: medium !important;
+    }
+  
+    .logo{
+        padding:10px;
+        height: 80px;
+        img{
+            height:100px;
+        }
+        margin-left: 20%;
+    }
+ion-list{
+    margin-top:100px !important;
+}
+}

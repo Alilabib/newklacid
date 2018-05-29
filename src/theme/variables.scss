@@ -1,0 +1,116 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #488aff,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222,
+  login-btn: rgba(247, 151, 37, 0.8),  
+  footer:   #314147,
+  segment:  #f79b2e,
+  chat-bubble: #f79b2e,
+  fab:  #2e3d45
+  
+);
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+//modal
+$modal-inset-min-width : 20px;
+$modal-inset-min-height-small : 200px;
+$modal-inset-width : 320px;
+
+//menu
+$menu-md-background:rgba(0,0,0,0.8);
+$menu-ios-background:rgba(0,0,0,0.8);
+$menu-width:250px;
+
+//segment
+$segment-button-md-line-height:1.6rem;
+$segment-button-ios-line-height:1.6rem;
+$segment-button-ios-height:4rem;
+
+
+
+$item-md-detail-push-show:true;
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('../assets/fonts/Mark Simonson - Proxima Nova Alt Regular-webfont.ttf') format('truetype');
+}
+$font-family-base: "ProximaNova";
+$font-family-ios-base: $font-family-base;
+$font-family-md-base: $font-family-base;
+$font-family-wp-base: $font-family-base;

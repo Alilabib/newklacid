@@ -1,0 +1,80 @@
+<!--
+  Generated template for the ChatPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="footer">
+    <ion-title>Chat</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+      <div text-center >
+<ion-spinner *ngIf="loading" ></ion-spinner>
+      </div>
+  <ion-list no-lines>
+      <ion-item *ngIf="image||video" >
+          <div class="chatBubble" >
+              <img class="profile-pic right" src="assets/icon/avatar.png">
+              <div class="chat-bubble right">
+                <div class="message">
+                    <img *ngIf="image" class="up" style="max-height:200px" src="{{image}}"/>   
+                    <video *ngIf="video" class="up" height="200px" poster="{{msg.senderName}}" controls>
+                  <source src="{{video}}" type="video/mp4">
+                    </video> 
+                      <div *ngIf="uploading"  class="progress-inner" [style.width]="progress + '%'">
+                          {{progress}}%
+                      </div>
+                </div>
+                <div class="message-detail">
+                    <span> <ion-icon name="done-all" ></ion-icon> </span>
+                </div>
+              </div>
+            </div>
+          </ion-item>
+    <ion-item *ngFor="let msg of messages"  >
+        <div id="{{msg.id}}" class="chatBubble" >
+            <img class="profile-pic {{msg.position}}" src="assets/icon/avatar.png">
+            <div class="chat-bubble {{msg.position}}">
+              <div class="message">{{msg.message}}
+                <img *ngIf="msg.photo" (click)="showpic(photourl+msg.photo)" style="max-height:200px"  src="{{photourl+msg.photo}}"/>   
+                <video *ngIf="msg.video" height="200px" poster="{{msg.senderName}}" controls >
+                  <source src="{{photourl+msg.video}}" type="video/mp4">
+                </video> 
+              </div>
+              <div class="message-detail">
+                  <span style="font-weight:bold;">{{msg.senderName}} </span>,
+                  <span  >{{msg.time}}</span>
+                  <span> <ion-icon [color]="msg.color" name="done-all" ></ion-icon> </span>
+              </div>
+            </div>
+          </div>
+        </ion-item>
+       
+  </ion-list>
+</ion-content>
+
+<ion-footer >
+  <ion-row>
+    <ion-icon (tap)="getAttach()" item-start >
+      <img src="assets/icon/attatch.png" />
+    </ion-icon>
+    <ion-textarea #myInput id="myInput" [(ngModel)]="text"  rows="1" (keyup)="resize()" ></ion-textarea>
+    <ion-icon (tap)="sendmessage()" *ngIf="!loading_txt" >
+      <img src="assets/icon/Send.png" />
+    </ion-icon>
+    <ion-spinner *ngIf="loading_txt" ></ion-spinner>
+  </ion-row>
+</ion-footer>

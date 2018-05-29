@@ -1,0 +1,290 @@
+<!--
+  Generated template for the GuidelinesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="footer">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Guidelines</ion-title>
+    </ion-navbar>
+    <ion-segment [(ngModel)]="segment" color="segment" (ionChange)="segmentChanged($event)">
+        <ion-segment-button value="acute">
+            Acute Bacterial
+            <br> Rhinosinusitis
+        </ion-segment-button>
+        <ion-segment-button value="gas">
+            GAS
+            <br> Pharyngitis
+        </ion-segment-button>
+        <ion-segment-button value="community">
+            Community Acquired
+            <br> Pneumonia (CAP)
+        </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+
+<ion-content text-center>
+
+
+
+    <div [ngSwitch]="segment">
+
+        <div padding *ngSwitchCase="'acute'">
+            <img src="assets/ref/g1.png" />
+        </div>
+
+        <div padding *ngSwitchCase="'gas'">
+            <img src="assets/ref/g2.png" />
+        </div>
+
+        <ion-slides spaceBetween=50 pager=true padding *ngSwitchCase="'community'" direction="vertical">
+            <ion-slide style="height: 700px">
+                <img src="assets/ref/g3.jpg" />
+                <ion-note style="float:right;font-size:xx-small">Adapted from ref. 3</ion-note>
+
+            </ion-slide>
+            <ion-slide>
+                <p class="paragraph"> British thoracic society community acquired pneumonia in adults guidelines group october 2009 vol 64 supplement
+                    III
+                </p>
+                <p class="paragraph2">Initial empirical treatment regimens for community acquired pneumonia (CAP) in adults </p>
+                <table>
+                    <thead>
+                        <th WIDTH=31%>Pneumonia severity (based on clinical judgement supported by CURB65 severity score</th>
+                        <th WIDTH=8.5% style="text-align:center">
+                            Treatment site
+                        </th>
+                        <th WIDTH=30% style="text-align:center">
+                            Preferred treatment
+                        </th>
+                        <th WIDTH=31%>
+                            Alternative treatment
+                        </th>
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="hover" (tap)="generatemodal('assets/ref/t1.png')">
+                                <b>Low severity</b>
+                                (eg, CURB65 = 0–1 or CRB65 score = 0,
+                                <3% mortality) </td>
+                                    <td>
+                                        Home
+                                    </td>
+                                    <td>
+                                        Amoxicillin 500 mg tds orally
+                                    </td>
+                                    <td>
+                                        Doxycycline 200 mg loading dose then 100 mg orally or clarithromycin 500 mg bd orally
+                                    </td>
+                        </tr>
+                        <tr>
+                            <td class="hover" (tap)="generatemodal('assets/ref/t2.png')">
+                                <b> Low severity </b>
+                                (eg, CURB65 = 0–1,
+                                <3% mortality) but admission indicated for reasons other than pneumonia severity (eg, social reasons/unstable comorbid illness)
+                                    </td>
+                                    <td>
+                                        Hospital
+                                    </td>
+                                    <td>
+                                        Amoxicillin 500 mg tds orally If oral administration not possible: amoxicillin 500 mg tds IV
+                                    </td>
+                                    <td>
+                                        Doxycycline 200 mg loading dose then 100 mg od orally or clarithromycin 500 mg bd orally
+                                    </td>
+                        </tr>
+                        <tr>
+                            <td class="hover" (tap)="generatemodal('assets/ref/t3.png')">
+                                <b> Moderate severity </b>
+                                (eg, CURB65 = 2, 9% mortality)
+                            </td>
+                            <td>
+                                Hospital
+                            </td>
+                            <td>
+                                Amoxicillin 500 mg –1.0 g tds orally plus clarithromycin 500 mg bd orally If oral administration not possible: amoxicillin
+                                500 mg tds IV or benzylpenicillin 1.2 g qds IV plus clarithromycin 500 mg bd IV
+                            </td>
+                            <td>
+                                Doxycycline 200 mg loading dose then 100 mg orally or levofloxacin 500 mg od orally or moxifloxacin 400 mg od orally*
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="hover" (tap)="generatemodal('assets/ref/t4.png')">
+                                <b> High severity </b>
+                                (eg, CURB65 = 3–5, 15–40% mortality)
+                            </td>
+                            <td>
+                                Hospital (consider critical care review)
+                            </td>
+                            <td>
+                                Antibiotics given as soon as possible Co-amoxiclav 1.2 g tds IV plus clarithromycin 500 mg bd IV (If legionella strongly
+                                suspected, consider adding levofloxacin†)
+                            </td>
+                            <td>
+                                Benzylpenicillin 1.2 g qds IV plus either levofloxacin 500 mg bd IV or ciprofloxacin 400 mg bd IV OR Cefuroxime 1.5 g tds
+                                IV or cefotaxime 1 g tds IV or ceftriaxone 2 g od IV, plus clarithromycin 500 mg bd IV (If
+                                legionella strongly suspected, consider adding levofloxacin†)
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="paragraph3">
+                    bd, twice daily; IV, intravenous; od, once daily; qds, four times daily; tds, three times daily. *Following reports of an
+                    increased risk of adverse hepatic reactions associated with oral moxifloxacin, in October 2008 the European
+                    Medicines Agency (EMEA) recommended that moxifloxacin ‘‘should be used only when it is considered inappropriate
+                    to use antibacterial agents that are commonly recommended for the initial treatment of this infection’’.
+                    †Caution – risk of QT prolongation with macrolide-quinolone combination.
+                </p>
+                <ion-note style="float:right;font-size:xx-small"> Adapted from ref. 3 </ion-note>
+            </ion-slide>
+            <ion-slide>
+                <img src="assets/ref/g32.png" />
+
+            </ion-slide>
+            <ion-slide>
+                <p class="paragraph"> Empirical treatment of community acqiured pneumonia</p>
+                <table align="center">
+                    <colgroup span="2"></colgroup>
+                    <colgroup span="2"></colgroup>
+                    <tr>
+
+                        <th class="rotate" WIDTH=2% rowspan="5">
+                            <div>
+                                <span>Outpatient treatment</span>
+                            </div>
+                        </th>
+                        <th WIDTH=20% rowspan="2"> Type of patients, causative factor
+                        </th>
+                        <th style="text-align:center" WIDTH=50% colspan="2" scope="colgroup">First line treatment</th>
+                        <th colspan="2" WIDTH=28% scope="colgroup">Second line treatment</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Antibiotic</th>
+                        <th scope="col">Dosage</th>
+                        <th scope="col">Antibiotic</th>
+                        <th scope="col">Dosage</th>
+                    </tr>
+                    <tr>
+                        <td class="hover" (tap)="generatemodal('assets/ref/t5.png')" scope="row">Healthy individual and no antibiotics in previous 3 months </td>
+                        <td>Clarithromycin (Biaxin Bid*) OR (Biaxin XL*) OR Azithromycin (Zithromax*)
+                        </td>
+                        <td>500 mg PO BID* 7 days 1000 mg PO BID* 7 days 500 mg PO on 1st day then 250 mg PO daily* 4 day
+                        </td>
+                        <td>Doxycyclin (Vibramycin*, Vibra-tabs*)</td>
+                        <td>100 mg PO BID* 10 days
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="hover" (tap)="generatemodal('assets/ref/t6.png')" scope="row">
+                            <b>Presence of comorbidities: </b> heart, pulmonary or renal disease, diabetes mellitus, alcoholism,
+                            malignancy, immuno- suppression or use of antibiotics in previous 3 months
+                        </td>
+                        <td>Levofloxacin (Levaquin*) OR Moxifloxacin (Avelox*) OR Amoxicillin (High dose) Amoxicillin- clavulanate
+                            potassium (Clavulin*) OR Cefuroxime axetil (Ceftin*) And Clarithromycin (Biaxin Bid*) OR (Biaxin
+                            XL*) OR Azithromycin (Zithromax*)
+                        </td>
+                        <td>500 mg PO daily* 7−14 days OR 750 mg PO daily* 5 days 400 mg PO daily* 10 days OR 1000 mg PO TID*
+                            10 days 875 mg PO BID or 500 mg PO TID* 10 days 500 mg PO BID* 7 days 500 mg PO BID* 7 days 1000
+                            mg PO DIE* 7 days 500 mg PO on 1st day then 250 PO DIE* 4 days
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="hover" (tap)="generatemodal('assets/ref/t7.png')" scope="row">Patient residing in a long-term care facility (LTCF)
+
+                        </td>
+                        <td>Levofloxacin (Levaquin*) OR Moxifloxacin (Avelox*) OR Amoxicillin-clavulanate potassium (Clavulin*)
+                            And Clarithromycin (Biaxin Bid*) OR (Biaxin XL*) OR Azithromycin (Zithromax*)
+                        </td>
+                        <td>500 mg PO daily* 7−14 days OR 750 mg PO daily* 5 days 400 mg PO daily* 10 days OR 875 mg PO BID or
+                            500 mg PO TID* 10 days 500 mg PO BID* 7 days 1000 mg PO DIE* 7 days 500 mg PO on 1st day then
+                            250 PO DIE* 4 days
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th class="rotate" id="blue" WIDTH=2%>
+                            <div>
+                                <span>Inpatient treatment</span>
+                            </div>
+                        </th>
+
+                        <td class="hover" (tap)="generatemodal('assets/ref/t8.png')" scope="row">Hospitalized patient
+                        </td>
+                        <td>Levofloxacin (Levaquin*) OR Moxifloxacin (Avelox*) OR Cefotaxime (Claforan*) OR Ceftriaxone (Rocephin*)
+                            And Clarithromycin (Biaxin Bid*) OR (Biaxin XL*) OR Azithromycin (Zithromax*)
+                        </td>
+                        <td>500 mg PO/IV DIE* 7−14 days OR 750 mg PO/IV* 5 days 400 mg PO/IV DIE* 7−14 days OR 1−2 g IV every
+                            8 hours 1−2 g IV every 12−24 hours 500 mg PO BID* 7 days 1000 mg PO DIE* 7 days 500 mg IV every
+                            24 hours
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <ion-note style="float:right;font-size:xx-small">Adapted from ref. 4</ion-note>
+            </ion-slide>
+            <ion-slide>
+                <p class="paragraph"> Empirical treatment of community acqiured pneumonia</p>
+
+                <table>
+
+                    <tr>
+                        <th class="rotate" id="blue" WIDTH=2%>
+                            <div>
+                                <span></span>
+                            </div>
+                        </th>
+
+                        <td class="hover" (tap)="generatemodal('assets/ref/t9.png')" scope="row">Patient hospitalized in intensive care
+
+                        </td>
+                        <td>Levofloxacin (Levaquin*) OR Moxifloxacin (Avelox*)
+
+                        </td>
+                        <td>500 mg PO/IV DIE* 7−14 days OR 750 mg PO/IV* 5 days 400 mg PO/IV DIE* 7−14 days
+
+                        </td>
+                        <td>
+                            Cefotaxime (Claforan*) OR Ceftriaxone (Rocephin*) AND Clarithromycin (Biaxin Bid*) OR (Biaxin XL* ) OR Azithromycin (Zithromax*)
+
+                        </td>
+                        <td>
+                            1-2 g IV every 8 hours 1-2 g IV every 12-24 hours 500 mg PO BID* 7 days 1000 mg PO DIE* 7 days 500 mg IV every 24 hour
+
+
+                        </td>
+                    </tr>
+                </table>
+
+                <ion-note style="float:right;font-size:x-small">Adapted from ref. 4</ion-note>
+                <p class="paragraph3">
+                    *adapted from IDSA and ATS consensus guidelines on the management of community acquired pneumonia in adults. clinical infectious
+                    disease 2007, 44( suppl) †one of main risk factors for S. pneumonia resistance is the use of antibiotics
+                    in the previous 3 months. in which case a different class of antibiotic should be selected ‡The antibiotics
+                    are listed in alphabetical order of their genetic name. only one brand name product is listed although
+                    several manufacturers may market other brand names. §View macrolides under treatment guidelines #when
+                    administering respiratory quinolones, the interval recommended between the use of quinolones and the
+                    use of medication containing bivalent or trivalent loss (Iron, Calcium, Aluminium, Magnesium, Multivitamin,
+                    Minerals)
+                </p>
+            </ion-slide>
+
+        </ion-slides>
+
+    </div>
+
+</ion-content>
+<ion-footer no-lines>
+    <img (click)="gotofooter()" src="assets/ref/{{segment_footer}}" />
+</ion-footer>

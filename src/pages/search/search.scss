@@ -1,0 +1,48 @@
+page-search {
+h3{
+    color:#33444a;
+}
+
+
+ul{
+    border-bottom: 1px solid #33444a;
+    padding: 20px;
+    margin-bottom: 10px;
+    h3{
+        color:#f79b2e;
+    }
+}
+li{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+
+ion-searchbar{
+    margin-bottom: 20px;
+}
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+}
+
+}

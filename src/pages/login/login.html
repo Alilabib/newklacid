@@ -1,0 +1,35 @@
+
+<ion-content text-center padding>
+<img class="fadeInUp" height="150px" src="assets/icon/logo.png" />
+    <form padding [formGroup]="loginForm">
+        <ion-item >
+            <ion-label>
+              <ion-icon >
+                <img src="assets/icon/username.png" />
+              </ion-icon>
+              Username</ion-label>
+          <ion-input autocomplete="on" formControlName="username"  clearInput=true type="text" required ></ion-input>
+        <ion-icon item-end color="danger" *ngIf="loginForm.controls.username.invalid && loginForm.controls.username.touched " name="alert" ></ion-icon>
+        </ion-item>
+      <ion-item>
+        <ion-label>
+            <ion-icon >
+                <img src="assets/icon/password.png" />
+              </ion-icon>
+          Password</ion-label>
+        <ion-input autocomplete="on" formControlName="password"  clearInput=true type="password" required ></ion-input>
+      <ion-icon item-end color="danger" *ngIf="loginForm.controls.password.invalid && loginForm.controls.password.touched " name="alert" ></ion-icon>
+      </ion-item>
+      <ion-spinner *ngIf="loading" ></ion-spinner>
+      <button ion-button block *ngIf="!loading" (tap)="submit()" color="login-btn" >LOGIN</button>
+      <ion-item no-lines style="background:transparent !important" >    
+      <ion-checkbox color="login-btn"  item-start formControlName="remember_me"  > </ion-checkbox>
+              <ion-label style="color:white !important;" > Remember me </ion-label> 
+      </ion-item>
+      </form>
+        <a  (tap)="forgetpass()" style="color:white;margin-top:200px !important;" ><u >Forget Your password ?</u></a> 
+
+</ion-content>
+<!-- <ion-footer text-center >
+  <button ion-button (tap)="signup()" color="light" clear>Create A New Account</button>
+</ion-footer> -->

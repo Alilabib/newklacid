@@ -1,0 +1,74 @@
+<!--
+  Generated template for the SearchPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="footer">
+      <button ion-button menuToggle>
+          <ion-icon name="menu" color="light" ></ion-icon>
+        </button>
+    <ion-title>Refine Search Engine</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content  padding>
+  <h3 text-center >Search By Keywords</h3>
+    <ion-searchbar
+    [(ngModel)]="search"
+    [showCancelButton]="shouldShowCancel"
+    (ionInput)="onInput()"
+     animated=true spellcheck="true">
+  </ion-searchbar>
+<img margin="10px" *ngIf="!search" src="assets/imgs/search.png"/>  
+<div *ngFor="let i of searched" > 
+<ul *ngIf="i.dep=='guidelines'" >
+  <h3 (tap)="goto('guide','')" > GUIDELINES </h3>
+  <li (tap)="goto('guide','acute')" *ngIf="i.title=='guidelines'||i.title=='acute bacterial rhinosinusitis'"  >Acute bacterial rhinosinusitis</li>
+  <li (tap)="goto('guide','gas')" *ngIf="i.title=='guidelines'||i.title=='gas pharyngitis'" >GAS pharyngitis</li>
+  <li (tap)="goto('guide','community')"  *ngIf="i.title=='guidelines'||i.title=='community acquired pneumonia cap'" >Community acquired pneumonia (CAP)</li>
+  
+</ul>
+<ul *ngIf="i.dep=='patient'" >
+    <h3 (tap)="goto('patient','')" > PATIENT PROFILES </h3>
+    
+    <li  *ngIf="i.title=='patient profiles'||i.title=='utrls'"  >
+      URTLS
+      <ul style="border:0px" >
+  <li (tap)="goto('patient-d','p1')" *ngIf="i.title=='patient profiles'||i.title=='acute bacterial rhinosinusitis'||i.title=='utrls'" >Acute bacterial rhinosinusitis</li>
+  <li (tap)="goto('patient-d','p2')" *ngIf="i.title=='patient profiles'||i.title=='pharyngotonsillitis'||i.title=='utrls'"  >Pharyngotonsillitis</li>
+      </ul>
+    </li>
+      
+    <li *ngIf="i.title=='patient profiles'||i.title=='ltrls'"  >
+        LTRLS
+        <ul style="border:0px" >
+          <li (tap)="goto('patient-d','p3')" *ngIf="i.title=='patient profiles'||i.title=='ltrls'||i.title=='aecb'"    > AECB</li>
+          <li (tap)="goto('patient-d','p4')" *ngIf="i.title=='patient profiles'||i.title=='ltrls'||i.title=='cab'"    >CAP</li>          
+        </ul>
+      </li>
+    
+  </ul>
+  <ul *ngIf="i.dep=='interactive'"  >
+      <h3 (tap)="goto('interactive','')" > INTERACTIVE PI </h3>
+      <li (tap)="goto('interactive','dosage')" *ngIf="i.title=='interactive pi'||i.title=='dosage forms'"  >Dosage forms</li>
+      <li (tap)="goto('interactive','contradictions')" *ngIf="i.title=='interactive pi'||i.title=='contraindictions'" >Contraindictions</li>
+      <li (tap)="goto('interactive','spectrum')" *ngIf="i.title=='interactive pi'||i.title=='spectrum of activity'"  >Spectrum of activity</li>
+      <li (tap)="goto('interactive','precaution')" *ngIf="i.title=='interactive pi'||i.title=='precautions'"   >Precautions</li>
+      <li (tap)="goto('interactive','ideal')" *ngIf="i.title=='interactive pi'||i.title=='an ideal antimicrobial'"  >An ideal antimicrobial</li>
+      <li (tap)="goto('interactive','safety')" *ngIf="i.title=='interactive pi'||i.title=='safety'" >Safety</li>
+      <li (tap)="goto('interactive','convenience')" *ngIf="i.title=='interactive pi'||i.title=='convenience'"   >Convenience</li>
+      <li (tap)="goto('interactive','pharma')" *ngIf="i.title=='interactive pi'||i.title=='pharmacokinetics'"  >Pharmacokinetics</li>
+      <li (tap)="goto('interactive','resistance')" *ngIf="i.title=='interactive pi'||i.title=='resistance'"    >Resistance</li>
+      <li (tap)="goto('interactive','iv')" *ngIf="i.title=='interactive pi'||i.title=='iv administration steps'"   >IV administration steps</li>
+      
+    </ul>
+    <ul *ngIf="i.dep=='dose'"    >
+        <h3 (tap)="goto('dosecalc','')" > DOSE CALCULATOR </h3>
+      </ul>
+</div>
+</ion-content>

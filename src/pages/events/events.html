@@ -1,0 +1,66 @@
+<!--
+  Generated template for the EventsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="footer">
+      <button ion-button menuToggle>
+          <ion-icon name="menu" color="light" ></ion-icon>
+        </button>
+    <ion-title >Events</ion-title>
+  </ion-navbar>
+  <ion-segment [(ngModel)]="segment" color="segment" (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="calendar">
+          Calendar View
+      </ion-segment-button>
+      <ion-segment-button value="list">
+        List View
+      </ion-segment-button>
+
+    </ion-segment>
+</ion-header>
+
+
+<ion-content text-center >
+   
+  <img src="assets/imgs/events.png"/>
+      <ion-spinner *ngIf="loading" ></ion-spinner>
+<div [ngSwitch]="segment" >
+      <div padding *ngSwitchCase="'calendar'">
+  <!-- <ion-calendar [(ngModel)]="date" (change)="onPeriodChange($event)"></ion-calendar> -->
+  <!-- <ion-calendar [(ngModel)]="dateMulti"
+              [options]="optionsMulti"
+              [type]="type"
+              [format]="'YYYY-MM-DD'">
+</ion-calendar> -->
+<!-- <h3>  {{today_date}} </h3> -->
+
+<!-- <mbsc-form >
+        
+        <div padding mbsc-eventcalendar display="inline" [colors]="coloredDays"></div>
+
+</mbsc-form> -->
+<ion-calendar *ngIf="!loading" readonly=true 
+              [options]="optionsMulti"
+              [format]="'YYYY-MM-DD'">
+</ion-calendar>
+          </div>
+        
+          <div  *ngSwitchCase="'list'">
+              <ion-list  >
+                  <ion-item  (tap)="gotoevent(event)" *ngFor="let event of listview"  detail-push >
+                    <ion-thumbnail padding item-start>
+                      <h1><b style="margin-top:8px;font-size:33px;color:rgb(46, 62, 68);font-weight:bold" >{{event.day}}</b></h1>
+                      {{event.month}}
+                    </ion-thumbnail>
+                    <h2>{{event.event_name}}</h2>
+                    <p>{{event.event_content}}<p>
+                  </ion-item>
+                </ion-list>
+            </div>
+          </div>
+
+</ion-content>

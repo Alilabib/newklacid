@@ -1,0 +1,141 @@
+<!--
+  Generated template for the InteractivepiPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="footer">
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Interactive pi</ion-title>
+  </ion-navbar>
+  <ion-segment color="segment" [(ngModel)]="segment">
+      <ion-segment-button value="dosage">
+        Dosage forms
+      </ion-segment-button>
+      <ion-segment-button value="contradictions">
+        Contradictions
+      </ion-segment-button>
+      <ion-segment-button value="precaution">
+        Precautions
+      </ion-segment-button>
+      <ion-segment-button value="spectrum">
+        Spectrum of activity
+      </ion-segment-button>
+      <ion-segment-button value="ideal">
+        An ideal antimicrobial
+      </ion-segment-button>
+      <ion-segment-button value="safety">
+        Safety
+      </ion-segment-button>
+      <ion-segment-button value="convenience">
+          Convenience
+        </ion-segment-button>
+      <ion-segment-button value="pharma">
+        Pharmacokinetics
+      </ion-segment-button>
+      <ion-segment-button value="resistance">
+        Resistance
+      </ion-segment-button>
+      <ion-segment-button value="iv">
+        IV administration steps
+      </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+
+<ion-content>
+  
+  <div [ngSwitch]="segment">
+    <div padding *ngSwitchCase="'dosage'">
+   <ion-row>
+     <ion-col col-33 >
+       <a (tap)="changesubsegment('tablets')" >
+       <ion-icon  >
+         <img src="{{tablets}}"/>
+       </ion-icon>
+       </a>
+     </ion-col>
+     <ion-col col-33  >
+       <a style="margin-right:4px" (tap)="changesubsegment('oral')"  >
+       <ion-icon >
+         <img src="{{oral}}"/>
+       </ion-icon>
+       </a >
+     </ion-col>
+     <ion-col col-33>
+       <a style="margin-left:4px" (tap)="changesubsegment('intraventous')"   >
+       <ion-icon  >
+         <img src="{{interaventous}}"/>
+       </ion-icon>
+       </a>
+     </ion-col>
+   </ion-row>
+
+
+      <div [ngSwitch]="subsegment" >
+        <div *ngSwitchCase="'tablets'" >
+      <img src="assets/ref/tablets.png" />
+      <img src="assets/ref/tablets2.png"/>
+        </div> 
+        
+        <div *ngSwitchCase="'intraventous'" >
+            <img src="assets/ref/intraventous.png" />
+              </div>   
+
+              <div *ngSwitchCase="'oral'" >
+                  <img src="assets/ref/oral.png" />
+                  <img src="assets/ref/oral1.png" />                  
+                  <img src="assets/ref/oral2.png" />
+                  
+                    </div> 
+      </div>
+    </div>     
+    <div padding *ngSwitchCase="'contradictions'">
+      
+      <img src="assets/ref/contradictions.png" />
+      
+    </div>
+    
+    <div padding *ngSwitchCase="'convenience'">
+      <img src="assets/ref/convenience.png" />
+    </div>
+    
+
+    <div padding *ngSwitchCase="'precaution'">
+      <img src="assets/ref/precautions.png" />
+      <img src="assets/ref/precautions1.png" />
+      <img src="assets/ref/precaution3.png" />
+      <img src="assets/ref/precaution4.png" />
+      <img src="assets/ref/precautions4.png" />
+      
+    </div>
+    <div padding  *ngSwitchCase="'spectrum'">
+      <img (tap)="generatemodal('assets/ref/spec-details.png')" src="assets/ref/spectrum.png" />
+    </div>
+    <div padding *ngSwitchCase="'ideal'">
+      <img src="assets/ref/ideal.png" />
+    </div>
+    <div padding *ngSwitchCase="'safety'">
+      <img src="assets/ref/safety.png" />
+      <img src="assets/ref/safety1.png" />
+      
+    </div>
+    <div padding *ngSwitchCase="'pharma'">
+      <img src="assets/ref/pharma.png" />
+    </div>
+    <div padding *ngSwitchCase="'resistance'">
+      <img src="assets/ref/resistance.png" />
+    </div>
+    <div padding *ngSwitchCase="'iv'">
+      <img src="assets/ref/iv.png" />
+    </div>
+
+    </div>
+</ion-content>
+<ion-footer no-lines >
+    <img (click)="gotofooter()" src="assets/ref/g2f.png"/>
+</ion-footer>
